@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">"Nat Co "</string>
+    <string name="facebook_app_id">1761329874118705</string>
+    <string name="fb_login_protocol_scheme">fb1761329874118705</string>
+    <string name="title_activity_main_page">MainPage</string>
+    <string name="action_settings">Settings</string>
+</resources>
