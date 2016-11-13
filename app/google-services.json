@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "719423407567",
+    "firebase_url": "https://natco-147623.firebaseio.com",
+    "project_id": "natco-147623",
+    "storage_bucket": "natco-147623.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:719423407567:android:61c38aaa4cec68cf",
+        "android_client_info": {
+          "package_name": "com.example.houcem.natco"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "719423407567-vngiu01e8h7t29ng0ua4r114s9en2e73.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.houcem.natco",
+            "certificate_hash": "A53BD6002C9F5D420553389D26D29B8CD4FF7FB6"
+          }
+        },
+        {
+          "client_id": "719423407567-po6f56rd6s3720gkj0hk7qqqmn5jisvp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPf9heKRFJgiPOGvoI4yki5Tuqd1AOHkw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "719423407567-po6f56rd6s3720gkj0hk7qqqmn5jisvp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
