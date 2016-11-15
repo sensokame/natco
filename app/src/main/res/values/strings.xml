@@ -1,7 +1,16 @@
 <resources>
-    <string name="app_name">"Nat Co "</string>
+    <string name="app_name">"Nat'Co 2k16"</string>
     <string name="facebook_app_id">1761329874118705</string>
     <string name="fb_login_protocol_scheme">fb1761329874118705</string>
     <string name="title_activity_main_page">MainPage</string>
     <string name="action_settings">Settings</string>
+    <string-array name="menu_items">
+        <item>acceuil</item>
+        <item>agenda</item>
+        <item>hotel</item>
+        <item>partenaires</item>
+        <item>Oc team</item>
+        <item>Faci team</item>
+        <item>Chair</item>
+    </string-array>
 </resources>
