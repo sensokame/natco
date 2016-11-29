@@ -4,6 +4,7 @@
     <string name="fb_login_protocol_scheme">fb1761329874118705</string>
     <string name="title_activity_main_page">MainPage</string>
     <string name="action_settings">Settings</string>
+    <string name="CONTENT_VIEW_ID">10101010</string>
     <string-array name="menu_items">
         <item>acceuil</item>
         <item>agenda</item>
@@ -12,5 +13,11 @@
         <item>Oc team</item>
         <item>Faci team</item>
         <item>Chair</item>
+        <item>Ask Your MCP</item>
     </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank Fragment</string>
+    <string name="demande_nom">you can chose to tell us who you are</string>
+    <string name="demande_local">you could tell us where you are from</string>
 </resources>

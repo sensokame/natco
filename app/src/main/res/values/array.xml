@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="LCs">
+        <item>--</item>
+        <item>Bardo</item>
+        <item>Bizerta</item>
+        <item>Carthage</item>
+        <item>Hadrumet</item>
+        <item>Medina</item>
+        <item>Nabeul</item>
+        <item>Tacapes</item>
+        <item>Thyna</item>
+        <item>Ruspina</item>
+        <item>Sfax</item>
+        <item>University</item>
+    </string-array>
+</resources>

@@ -26,8 +26,7 @@ public class SplashActivity extends Activity {
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         setContentView(R.layout.splash_screen);
-        FacebookSdk.sdkInitialize(getApplicationContext());
-        AppEventsLogger.activateApp(this);
+
 
         /* New Handler to start the Menu-Activity
          * and close this Splash-Screen after some seconds.*/
@@ -36,14 +35,9 @@ public class SplashActivity extends Activity {
             public void run() {
                 /* Create an Intent that will start the Menu-Activity. */
                 Intent mainIntent;
-                if(AccessToken.getCurrentAccessToken()!=null)
-                Log.e("checking credentials",AccessToken.getCurrentAccessToken().toString());
-                if(AccessToken.getCurrentAccessToken()!=null){
+
+
                     mainIntent = new Intent(SplashActivity.this,MainPage.class);
-                }
-                else{
-                    mainIntent = new Intent(SplashActivity.this,LoginPage.class);
-                }
 
                 SplashActivity.this.startActivity(mainIntent);
                 SplashActivity
