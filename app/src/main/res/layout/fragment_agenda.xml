@@ -2,20 +2,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.houcem.natco.fragments.AgendaFragment">
+    tools:context="com.example.houcem.natco.fragments.AgendaFragment"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
 
-    <TextView
-        android:text="TextView"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2"
-        android:layout_weight="1" />
+        android:orientation="horizontal"
+        tools:gravity="center">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/day1"
+            android:text="@string/day_one_button" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/day2"
+            android:text="@string/day_two_button" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/day3"
+            android:text="@string/day_three_button" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/day4"
+            android:text="@string/day_fourth_button" />
 
-    <TextView
-        android:layout_width="181dp"
-        android:layout_height="60dp"
-        android:text="@string/hello_blank_fragment" />
+
+    </LinearLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/agenda_list">
+
+    </ListView>
 
 </LinearLayout>

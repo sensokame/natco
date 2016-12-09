@@ -9,6 +9,7 @@
         android:id="@+id/news_list"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:divider="@color/com_facebook_messenger_blue" />
+        android:divider="@drawable/list_divider"
+        android:dividerHeight="2dp"/>
 
 </FrameLayout>

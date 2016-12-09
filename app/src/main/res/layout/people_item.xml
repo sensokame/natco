@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="match_parent"
+    android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/people_image"
-        android:layout_gravity="right"
-        android:foregroundGravity="right"
+        android:layout_gravity="center_horizontal"
+        android:foregroundGravity="center_horizontal"
 
         android:layout_weight="0"/>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_gravity="center|center_horizontal">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -30,12 +31,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/people_email"
+            android:autoLink="email"
+            android:clickable="true"
             android:layout_gravity="center"
             android:layout_weight="0"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/people_facebook"
+            android:autoLink="web"
+            android:clickable="true"
             android:layout_gravity="center"
             android:layout_weight="0"/>
 

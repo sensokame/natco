@@ -20,4 +20,8 @@
     <string name="hello_blank_fragment">Hello blank Fragment</string>
     <string name="demande_nom">you can chose to tell us who you are</string>
     <string name="demande_local">you could tell us where you are from</string>
+    <string name="day_one_button">day 1</string>
+    <string name="day_two_button">Day 2</string>
+    <string name="day_three_button">Day 3</string>
+    <string name="day_fourth_button">Day 4</string>
 </resources>

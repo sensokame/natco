@@ -9,6 +9,6 @@
         android:id="@+id/hotel_list"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:divider="@color/com_facebook_messenger_blue" />
+        android:divider="@drawable/list_divider" />
 
 </FrameLayout>

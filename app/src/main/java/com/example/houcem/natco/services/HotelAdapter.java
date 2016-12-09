@@ -16,8 +16,8 @@ import com.example.houcem.natco.data.HotelStructure;
  */
 
 public class HotelAdapter extends BaseAdapter {
-    Context context;
-    HotelStructure news[] = null;
+    private Context context;
+    private HotelStructure news[] = null;
 
     public HotelAdapter(Context context,HotelStructure[] news) {
         this.context = context;
@@ -63,7 +63,6 @@ public class HotelAdapter extends BaseAdapter {
 
 
     }
-
 
 
     private class hotelHolder {
