@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.GridView;
 import android.widget.ListView;
 
 import com.example.houcem.natco.R;
@@ -24,12 +25,14 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.Map;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 
 public class AgendaFragment extends Fragment {
 
     private Sessions[] agenda;
-    private ListView listView;
+    private GridView listView;
     private View mView;
     private Button mDay1Button;
     private Button mDay2Button;
@@ -99,15 +102,19 @@ public class AgendaFragment extends Fragment {
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 Map<String,Map> value = (Map)dataSnapshot.getValue();
                 Map<String,Map> values = value.get(mDay);
 
                 agenda = new Sessions[values.size()];
-                Log.e("seing size",String.valueOf(values.size()));
-
                 int i =0;
 
-                for(String key: values.keySet()){
+                SortedSet<String> keys = new TreeSet<String>(values.keySet());
+                for(String key: keys){
                     Map<String,String> item = values.get(key);
                     Session[] sessions = new Session[item.size()];
                     int j=0;
@@ -123,7 +130,7 @@ public class AgendaFragment extends Fragment {
                     i++;
                 }
 
-                listView = (ListView) mView.findViewById(R.id.agenda_list);
+                listView = (GridView) mView.findViewById(R.id.agenda_list);
                 agendaAdapter songAdapter = new agendaAdapter(getActivity(), agenda);
 
 

@@ -3,10 +3,15 @@ package com.example.houcem.natco;
 
 import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.app.Fragment;
 import android.support.v4.content.FileProvider;
@@ -16,6 +21,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.example.houcem.natco.fragments.AcceuilFragment;
@@ -26,6 +32,7 @@ import com.example.houcem.natco.fragments.HotelFragment;
 import com.example.houcem.natco.fragments.OCTeamFragment;
 import com.example.houcem.natco.fragments.PartnersFragment;
 import com.example.houcem.natco.fragments.QuestionsFragment;
+import com.example.houcem.natco.services.DownloadImageTask;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookSdk;
 import com.facebook.share.model.ShareHashtag;
@@ -41,6 +48,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 public class MainPage extends AppCompatActivity {
     private String[] mPlanetTitles;
@@ -113,6 +121,8 @@ public class MainPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
+        CoordinatorLayout mainlayout = (CoordinatorLayout)findViewById(R.id.main_layout_bg);
+
         mPlanetTitles = getResources().getStringArray(R.array.menu_items);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
@@ -143,11 +153,17 @@ public class MainPage extends AppCompatActivity {
                     }
                     // Continue only if the File was successfully created
                     if (photoFile != null) {
+
                         photoURI = FileProvider.getUriForFile(getApplicationContext(),
                                 "com.example.android.fileprovider",
                                 photoFile);
-                        takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
+                        Intent intent = takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
                         startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
+                        List<ResolveInfo> resInfoList = getPackageManager().queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
+                        for (ResolveInfo resolveInfo : resInfoList) {
+                            String packageName = resolveInfo.activityInfo.packageName;
+                            grantUriPermission(packageName, photoURI, Intent.FLAG_GRANT_WRITE_URI_PERMISSION | Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                        }
                     }
                 }
 
@@ -258,17 +274,18 @@ public class MainPage extends AppCompatActivity {
                 newFragment = new ChairFragment();
                 break;
             }
-            case 7:{
-                newFragment = new QuestionsFragment();
-                break;
-            }
+//            case 7:{
+//                newFragment = new QuestionsFragment();
+//                break;
+//            }
             default:{
                 newFragment = new AcceuilFragment();
                 break;
             }
         }
         FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.replace(R.id.main_fragment,newFragment).commit();
+        ft.replace(R.id.main_fragment,newFragment)
+                .commit();
 
     }
 

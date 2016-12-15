@@ -33,17 +33,17 @@ public class sessionsAdapter extends BaseAdapter {
     }
 
     @Override
-    public Object getItem(int i) {
-        return sessions[i];
+    public Object getItem(int j) {
+        return sessions[j];
     }
 
     @Override
-    public long getItemId(int i) {
-        return i;
+    public long getItemId(int j) {
+        return j;
     }
 
     @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
+    public View getView(int j, View view, ViewGroup viewGroup) {
         sessionHolder viewHolder;
         if (view == null) {
             view = LayoutInflater.from(context).inflate(R.layout.session_item, viewGroup, false);
@@ -53,7 +53,7 @@ public class sessionsAdapter extends BaseAdapter {
             viewHolder = (sessionHolder) view.getTag();
         }
 
-        currentItem = (Session) getItem(i);
+        currentItem = (Session) getItem(j);
         viewHolder.sessionName.setText(currentItem.getName());
         Log.e("inside adapter" , currentItem.getName());
         viewHolder.sessionName.setOnClickListener(new View.OnClickListener() {

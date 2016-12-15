@@ -13,15 +13,16 @@
         <item>Oc team</item>
         <item>Faci team</item>
         <item>Chair</item>
-        <item>Ask Your MCP</item>
+        <!--<item>Ask Your MCP</item>-->
     </string-array>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank Fragment</string>
+
     <string name="demande_nom">you can chose to tell us who you are</string>
     <string name="demande_local">you could tell us where you are from</string>
     <string name="day_one_button">day 1</string>
     <string name="day_two_button">Day 2</string>
     <string name="day_three_button">Day 3</string>
     <string name="day_fourth_button">Day 4</string>
+    <string name="first_item_agenda">-</string>
+    <string name="agenda_description">Agenda, click sessions for description</string>
 </resources>

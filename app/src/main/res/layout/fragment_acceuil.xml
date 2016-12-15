@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.houcem.natco.fragments.AcceuilFragment">
+    tools:context="com.example.houcem.natco.fragments.AcceuilFragment"
+    android:background="@drawable/newsfeedbg">
 
     <!-- TODO: Update blank fragment layout -->
     <ListView
@@ -10,6 +11,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:divider="@drawable/list_divider"
-        android:dividerHeight="2dp"/>
+        android:dividerHeight="2dp"
+        android:layout_gravity="center_horizontal"/>
 
 </FrameLayout>
